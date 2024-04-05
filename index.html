@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page_user</title>
+</head>
+<body>
+    <h1>Информация о пользователе</h1>
+    <ul>
+        <li><h3>Имя: {{name}}</h3></li>
+        <li><h3>Фамилия: {{last_name}}</h3></li>
+        <li><h3>Email: {{email}}</h3></li>
+        <li><h3>Дата рождения: {{birthday}}</h3></li>
+    </ul>
+    <hr>
+    <h2>Последние посты:</h2>
+    
+    <ul>
+        {%for p in posts%}
+        {%if not forloop.first%}
+        <li>
+            <h3>{{p}}</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </li>
+        
+        {% endif %}
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
